@@ -1,12 +1,13 @@
 <?php
 
-$host = 'localhost';
-$dbname = 'legacy_billiard';  // ✅ FIXED: Changed from 'legacy_billiard' to 'legacy_db'
-$username = 'root';
-$password = '';
+$host = getenv('DB_HOST') ?: 'localhost';
+$dbname = getenv('DB_DATABASE') ?: 'legacy_billiard';
+$username = getenv('DB_USERNAME') ?: 'root';
+$password = getenv('DB_PASSWORD') ?: '';
+$port = getenv('DB_PORT') ?: 3306;
 
-// Connect to database
-$conn = new mysqli($host, $username, $password, $dbname);
+// Connect to database dengan port
+$conn = new mysqli($host, $username, $password, $dbname, $port);
 
 // Check connection
 if ($conn->connect_error) {
