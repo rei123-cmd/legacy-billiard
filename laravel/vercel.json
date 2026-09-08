@@ -1,26 +1,30 @@
 {
   "version": 2,
   "functions": {
-    "api/index.php": {
+    "laravel/public/*.php": {
       "runtime": "vercel-php@0.6.2"
     }
   },
   "routes": [
-    { "src": "/build/(.*)", "dest": "/public/build/$1" },
-    { "src": "/css/(.*)", "dest": "/public/css/$1" },
-    { "src": "/js/(.*)", "dest": "/public/js/$1" },
-    { "src": "/images/(.*)", "dest": "/public/images/$1" },
-    { "src": "/gallery\\.php", "dest": "/public/gallery.php" },
-    { "src": "/booking\\.php", "dest": "/public/booking.php" },
-    { "src": "/booking-detail\\.php", "dest": "/public/booking-detail.php" },
-    { "src": "/cart\\.php", "dest": "/public/cart.php" },
-    { "src": "/checkout\\.php", "dest": "/public/checkout.php" },
-    { "src": "/tournament\\.php", "dest": "/public/tournament.php" },
-    { "src": "/aboutus\\.php", "dest": "/public/aboutus.php" },
-    { "src": "/login\\.php", "dest": "/public/login.php" },
-    { "src": "/register\\.php", "dest": "/public/register.php" },
-    { "src": "/promo\\.php", "dest": "/public/promo.php" },
-    { "src": "/profile\\.php", "dest": "/public/profile.php" },
-    { "src": "/(.*)", "dest": "/public/index.php" }
+    {
+      "src": "/css/(.*)",
+      "dest": "/laravel/public/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/laravel/public/js/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/laravel/public/images/$1"
+    },
+    {
+      "src": "/(.*\\.php)",
+      "dest": "/laravel/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/laravel/public/index.php"
+    }
   ]
 }
