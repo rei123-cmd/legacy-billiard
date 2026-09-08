@@ -11,8 +11,12 @@
       "dest": "/public/build/$1"
     },
     {
+      "src": "/(.*\\.php)",
+      "dest": "/public/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/api/index.php"
+      "dest": "/public/index.php"
     }
   ]
 }
