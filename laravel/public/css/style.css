@@ -41,7 +41,7 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('../images/bgsemua.jpg') center center/cover no-repeat fixed !important;
+            url('/images/bgsemua.jpg') center center/cover no-repeat fixed !important;
     overflow: hidden;
     margin-top: 0 !important;
     padding-top: 0 !important;
