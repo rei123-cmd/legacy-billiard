@@ -6,17 +6,21 @@
     }
   },
   "routes": [
-    {
-      "src": "/build/(.*)",
-      "dest": "/public/build/$1"
-    },
-    {
-      "src": "/(.*\\.php)",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/index.php"
-    }
+    { "src": "/build/(.*)", "dest": "/public/build/$1" },
+    { "src": "/css/(.*)", "dest": "/public/css/$1" },
+    { "src": "/js/(.*)", "dest": "/public/js/$1" },
+    { "src": "/images/(.*)", "dest": "/public/images/$1" },
+    { "src": "/gallery\\.php", "dest": "/public/gallery.php" },
+    { "src": "/booking\\.php", "dest": "/public/booking.php" },
+    { "src": "/booking-detail\\.php", "dest": "/public/booking-detail.php" },
+    { "src": "/cart\\.php", "dest": "/public/cart.php" },
+    { "src": "/checkout\\.php", "dest": "/public/checkout.php" },
+    { "src": "/tournament\\.php", "dest": "/public/tournament.php" },
+    { "src": "/aboutus\\.php", "dest": "/public/aboutus.php" },
+    { "src": "/login\\.php", "dest": "/public/login.php" },
+    { "src": "/register\\.php", "dest": "/public/register.php" },
+    { "src": "/promo\\.php", "dest": "/public/promo.php" },
+    { "src": "/profile\\.php", "dest": "/public/profile.php" },
+    { "src": "/(.*)", "dest": "/public/index.php" }
   ]
 }
